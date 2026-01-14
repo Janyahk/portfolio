@@ -4,9 +4,15 @@ import Project from './Project'
 import todo from '../../assets/todolist.png'
 import lottery from "../../assets/lottery.png"
 import simon from "../../assets/simongame.png"
+import wanderlust from "../../assets/wanderlust.png"
 const Projects = () => {
   const projects=[
-
+    {
+    "link": "https://wanderlust-5kpx.onrender.com/listings",
+    "name": "WanderLust",
+    "description": "Public",  
+    "photo": wanderlust
+  },
   {
     "link": "https://janyahk.github.io/lotteryticket/",
     "name": "lotteryticket",
