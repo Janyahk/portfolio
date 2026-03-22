@@ -17,7 +17,8 @@ const App = () => {
     }
   }, [section]);
   return (
-    <div className='bg-slate-900 m-0 text-white'>
+    <div className='w-full bg-slate-900 m-0 text-white   '>
+    {/* // <div className='bg-slate-900 text-white flex flex-col md:flex-row items-center gap-6 md:gap-10 lg:gap-16 p-4 md:p-8'> */}
       <Navbar onSectionChange={setSection}></Navbar>
        <div id="home" >
     <Hero onSectionChange={setSection} />
