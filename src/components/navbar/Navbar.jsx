@@ -1,23 +1,3 @@
-// import React from 'react'
-// import './Navbar.css'
-// import logo from '../../assets/logo.svg'
-// const Navbar = () => {
-//   return (
-//     <div className='navbar'>
-//       <h1 className='text-5xl bg-[url(assets/nav_underline.svg)] bg-no-repeat bg-right-bottom bg-[length:60px]'>Jany<span className=''>a</span></h1>
-//       <ul className='nav-menu '>
-//         <li className='hover:font-bold'>Home</li>
-//         <li className='hover:font-bold'>About</li>
-//         <li className='hover:font-bold'>Services</li>
-//         <li className='hover:font-bold'>Portfolio</li>
-//         <li className='hover:font-bold'>Contact</li>
-//       </ul>
-//       <div className="nav-connect">Connect with me</div>
-//     </div>
-//   )
-// }
-
-// export default Navbar
 
 import React, { useState } from 'react';
 import './Navbar.css';
@@ -33,8 +13,10 @@ const Navbar = ({ onSectionChange }) => {
 
   return (
     <>
-    <nav className="w-full flex items-center justify-between px-6 py-4 bg-slate-900 text-white fixed top-0 left-0 z-50">
+    {/* <nav className="w-full flex items-center justify-between px-6 py-4 bg-slate-900 text-white fixed top-0 left-0 z-50"> */}
       {/* Logo */}
+      <nav className="w-screen flex items-center justify-between px-4 md:px-8 lg:px-16 py-3 md:py-4 bg-slate-900 text-white fixed top-0 left-0 z-50">
+
       <h1 className="text-5xl bg-[url('assets/nav_underline.svg')] bg-no-repeat bg-right-bottom bg-[length:45px]">
         Jany<span>a</span>
       </h1>
