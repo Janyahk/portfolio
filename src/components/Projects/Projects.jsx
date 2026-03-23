@@ -5,6 +5,7 @@ import todo from '../../assets/todolist.png'
 import lottery from "../../assets/lottery.png"
 import simon from "../../assets/simongame.png"
 import wanderlust from "../../assets/wandelust.png"
+import ZenGPT from "../../assets/ZenGPT.png"
 const Projects = () => {
   const projects=[
     {
@@ -12,6 +13,12 @@ const Projects = () => {
     "name": "WanderLust",
     "description": "Public",  
     "photo": wanderlust
+  },
+   {
+    "link": "https://gptzen-frontend.onrender.com/",
+    "name": "ZenGPT",
+    "description": "Public",  
+    "photo": ZenGPT
   },
 
   {
@@ -38,6 +45,7 @@ const Projects = () => {
     "description": "Public",  
     "photo":simon
   }
+
 ]
 
   return (

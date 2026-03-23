@@ -28,14 +28,15 @@ const App = () => {
     <About />
   </div>
 
+   <div id="projects">
+    <Projects />
+  </div>
+
   <div id="skills">
     <Skills />
   </div>
 
-  <div id="projects">
-    <Projects />
-  </div>
-
+  
   <div id="contact">
     <Contact />
   </div>
