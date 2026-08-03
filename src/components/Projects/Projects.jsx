@@ -6,6 +6,7 @@ import lottery from "../../assets/lottery.png"
 import simon from "../../assets/simongame.png"
 import wanderlust from "../../assets/wandelust.png"
 import ZenGPT from "../../assets/ZenGPT.png"
+import beauty from "../../assets/beautyhub.png"
 const Projects = () => {
   const projects=[
     {
@@ -24,7 +25,7 @@ const Projects = () => {
     "link": "https://beautyhub-frontend.onrender.com/",
     "name": "Beauty Hub",
     "description": "Public",  
-    "photo":simon
+    "photo":beauty
   },
 
   {
