@@ -20,6 +20,12 @@ const Projects = () => {
     "description": "Public",  
     "photo": ZenGPT
   },
+    {
+    "link": "https://beautyhub-frontend.onrender.com/",
+    "name": "Beauty Hub",
+    "description": "Public",  
+    "photo":simon
+  },
 
   {
     "link": "https://janyahk.github.io/lotteryticket/",
