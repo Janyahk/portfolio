@@ -10,18 +10,21 @@ import beauty from "../../assets/beautyhub.png"
 const Projects = () => {
   const projects=[
     {
+      "id":1,
     "link": "https://wanderlust-5kpx.onrender.com/listings",
     "name": "WanderLust",
     "description": "Public",  
     "photo": wanderlust
   },
    {
+    "id":2,
     "link": "https://gptzen-frontend.onrender.com/",
     "name": "ZenGPT",
     "description": "Public",  
     "photo": ZenGPT
   },
     {
+      "id":3,
     "link": "https://beautyhub-frontend.onrender.com/",
     "name": "Beauty Hub",
     "description": "Public",  
@@ -29,12 +32,14 @@ const Projects = () => {
   },
 
   {
+    "id":4,
     "link": "https://janyahk.github.io/lotteryticket/",
     "name": "lotteryticket",
     "description": "Public",  
     "photo": lottery
   },
   {
+    "id":5,
     "link": "https://janyahk.github.io/todolist/",
     "name": "todolist",
     "description": "Public",  
@@ -47,6 +52,7 @@ const Projects = () => {
   //   "photo": "https://via.placeholder.com/300?text=weather"
   // },
   {
+    "id":6,
     "link": "https://janyahk.github.io/simon-game/",
     "name": "simon-game",
     "description": "Public",  
@@ -64,7 +70,7 @@ const Projects = () => {
         <div className="flex mt-10 flex-wrap gap-6 justify-center  items-center bg-gray-900 ">
         
         {projects.map((p)=>(
-          <Project a={p.link} name={p.name} img={p.photo}></Project>
+          <Project     key={p.id} a={p.link} name={p.name} img={p.photo}></Project>
         ))
         }
     </div>  

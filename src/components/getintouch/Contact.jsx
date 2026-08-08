@@ -1,17 +1,22 @@
 import { MdEmail } from "react-icons/md";
 import { FiPhone } from "react-icons/fi";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { useState } from "react";
 
 const Contact = () => {
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = async (e) => {
   e.preventDefault();
+if (sending) return;
+    const form = e.currentTarget;
 
   const formData = {
     name: e.target.name.value,
     email: e.target.email.value,
     message: e.target.message.value,
   };
+  setSending(true);
 try{
   const res = await fetch("https://portfolio-qwi1.onrender.com/send-mail", {
     method: "POST",
@@ -20,16 +25,18 @@ try{
   });
 
   const data = await res.json();
-
+  
   if (data.success) {
     alert("Message sent successfully 😎");
-    e.target.reset();
+    form.reset();
   } else {
     alert("Message sending failed 😭");
   }
 }catch (error) {
     console.error("Error:", error);
     alert("Unable to connect to the server 😭");
+  }finally{
+    setSending(false);
   }
 };
 
@@ -113,10 +120,10 @@ try{
 
             {/* Button */}
             <button 
-              type='submit' 
+              type='submit'   disabled={sending}
               className="w-32 h-12 border-2 border-white rounded-2xl mx-auto md:mx-0 hover:bg-white hover:text-black transition"
             >
-              Submit
+              {sending ? "Sending..." : "Submit"}
             </button>
           </form>
         </div>
