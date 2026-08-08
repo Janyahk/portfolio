@@ -6,6 +6,7 @@ import "dotenv/config";
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+const PORT = process.env.PORT || 5000;
 
 // POST route to send mail
 app.post("/send-mail", async (req, res) => {
@@ -23,7 +24,7 @@ app.post("/send-mail", async (req, res) => {
   // Mail details
   let mailOptions = {
     from: email,
-    to: "janyahkumarappa@gmail.com",
+    to:process.env.EMAIL_USER,
     subject: `New Contact Form Message from ${name}`,
     text: `
       Name: ${name}
@@ -41,4 +42,6 @@ app.post("/send-mail", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
