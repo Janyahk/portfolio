@@ -12,8 +12,8 @@ const Contact = () => {
     email: e.target.email.value,
     message: e.target.message.value,
   };
-
-  const res = await fetch("http://localhost:5000/send-mail", {
+try{
+  const res = await fetch("https://portfolio-qwi1.onrender.com/send-mail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(formData),
@@ -26,6 +26,10 @@ const Contact = () => {
     e.target.reset();
   } else {
     alert("Message sending failed 😭");
+  }
+}catch (error) {
+    console.error("Error:", error);
+    alert("Unable to connect to the server 😭");
   }
 };
 
